@@ -1,0 +1,104 @@
+* { 
+    padding: 0;
+    margin: 0; 
+    box-sizing:border-box;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body { 
+    background-color: rgb(0, 0, 0) ; 
+}
+
+
+header { 
+    font-size: 40px;
+    color: white;
+}
+
+h1 { 
+    font-weight: 800;
+}
+
+span { 
+    font-weight: 100;
+}
+
+.generateBtn { 
+    width: 180px;
+    height:80px;
+    border: 2px solid rgb(249, 0, 0);
+    border-radius: 12px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 50px;
+}
+
+.centerBtn { 
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex { 
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer { 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.image { 
+    margin-top: 40px;
+    background-color: rgb(254, 255, 255);
+    border: 2px solid rgb(255, 0, 0);
+    height: 350px;
+    width: 300px;
+    text-align: center;
+    padding-top: 30%;
+    font-size: 30px;
+}
+
+.biography { 
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 0, 0);
+    height: 350px;
+    width: 300px;
+    text-align: center;
+    padding-top: 30%;
+    font-size: 30px;
+}
+
+main { 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spaceBtn { 
+    margin: 20px;
+}
+
+.pg2Btns { 
+    border: 2px solid red;
+    border-radius: 12px;
+    margin: 20px;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    font-size: 20px;
+}
