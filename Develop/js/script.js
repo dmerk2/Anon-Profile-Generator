@@ -1,11 +1,14 @@
-
-
+var start = document.getElementById("generate")
 var box = document.getElementById("box")
-
 var whiteBtn = document.getElementById("white")
 var blackBtn = document.getElementById("black")
-var randomBtn = document.getElementById("random")
+var randomBtn = document.getElementById("randomColor")
 var down = document.getElementById("down")
+
+
+
+
+
 
 whiteBtn.addEventListener("click", function(){
     box.style.backgroundColor = "white"
@@ -38,6 +41,9 @@ const image = canvas.toDataURL("image/png", 1.0)
    
 }
 
+function goNext (){
+    window.location.href= "generator.html"
+}
 // 180px x 180px
 // {scale: 0.44}
 
