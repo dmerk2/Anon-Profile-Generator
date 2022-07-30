@@ -6,28 +6,18 @@ var randomBtn = document.getElementById("randomColor")
 var down = document.getElementById("down")
 
 
-var repoList = document.querySelector('img');
-var fetchButton = document.getElementById('box');
+var imageBox = document.getElementById('box')
+var monsterPic = document.getElementById('image')
 
-function getApi() {
-  
-  var requestUrl = ("https://app.pixelencounter.com/api/basic/monsters/random", 
-  { mode: "cors" }, 
-  { method: "get" });
-
-  fetch(requestUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      for (var i = 0; i < data.length; i++) {
-        var monsterImage = document.createElement('img');
-        monsterImage.textContent = data[i].html_url;
-        monsterImage.appendChild(img);
-      }
-    });
+function getApi()  {
+  fetch("https://app.pixelencounter.com/api/basic/monsters/random")
+  .then(res => res.json())
+  .then(result => {
+    console.log(result)
+    imageBox.src = result.message
+  })
+  .catch(err=>console.log(err))
 }
-
 
 
 whiteBtn.addEventListener("click", function(){
