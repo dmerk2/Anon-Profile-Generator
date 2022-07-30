@@ -23,7 +23,7 @@ function getApi() {
       for (var i = 0; i < data.length; i++) {
         var monsterImage = document.createElement('img');
         monsterImage.textContent = data[i].html_url;
-        repoList.appendChild(img);
+        monsterImage.appendChild(img);
       }
     });
 }
