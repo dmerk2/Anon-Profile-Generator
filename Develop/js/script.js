@@ -27,8 +27,8 @@ box.style.backgroundColor = "#" + randomCss;
 }
 
 function downloading(){
-html2canvas(box).then(function(canvas){
-    
+html2canvas(box, {scale: 0.44}).then(function(canvas){
+   
 const image = canvas.toDataURL("image/png", 1.0)
     const link = document.createElement("a")
     link.download = "profile-picture.png";
@@ -37,3 +37,9 @@ const image = canvas.toDataURL("image/png", 1.0)
 })
    
 }
+
+// 180px x 180px
+// {scale: 0.44}
+
+// 170px x 170px 
+// {scale: 0.417}
