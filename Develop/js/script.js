@@ -6,7 +6,22 @@ var randomBtn = document.getElementById("randomColor")
 var down = document.getElementById("down")
 
 
+<<<<<<< Updated upstream
 
+=======
+var imageBox = document.getElementById('box')
+var monsterPic = document.getElementById('image')
+
+function getApi()  {
+  fetch("https://app.pixelencounter.com/api/basic/monsters/random")
+  .then(res => res.json())
+  .then(result => {
+    console.log(result)
+    imageBox.src = result.message
+  })
+  .catch(err=>console.log(err))
+}
+>>>>>>> Stashed changes
 
 
 
