@@ -6,7 +6,27 @@ var randomBtn = document.getElementById("randomColor")
 var down = document.getElementById("down")
 
 
+var repoList = document.querySelector('img');
+var fetchButton = document.getElementById('box');
 
+function getApi() {
+  
+  var requestUrl = ("https://app.pixelencounter.com/api/basic/svgmonsters?primaryColor=string", 
+  { mode: "cors" }, 
+  { method: "get" });
+
+  fetch(requestUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      for (var i = 0; i < data.length; i++) {
+        var monsterImage = document.createElement('img');
+        monsterImage.textContent = data[i].html_url;
+        monsterImage.appendChild(img);
+      }
+    });
+}
 
 
 
