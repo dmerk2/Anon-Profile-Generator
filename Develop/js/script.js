@@ -11,7 +11,7 @@ var fetchButton = document.getElementById('box');
 
 function getApi() {
   
-  var requestUrl = ("https://app.pixelencounter.com/api/basic/svgmonsters?primaryColor=string", 
+  var requestUrl = ("https://app.pixelencounter.com/api/basic/monsters/random", 
   { mode: "cors" }, 
   { method: "get" });
 
