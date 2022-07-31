@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Random Profile Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="./Develop/css/style.css" />
 </head>
@@ -13,7 +14,9 @@
 <body>
 
   <main class="centerBtn">
-
+    <header class="jumbotron container-fluid bg-dark">
+      <h1 class="text-3xl font-bold underline">Generate your profile here</h1>
+    </header>
 
     <section id="box" class="image">
       <img id="monster" src="https://app.pixelencounter.com/api/basic/monsters/random" />
@@ -26,39 +29,39 @@
 
     <section id="randomBio" class="biography"></section>
     <section class="spaceBtn">
-      <!-- <button id="reroll" class="pg2Btns">reroll</button> --><!-- Button trigger modal -->
-    <button type="button" id="reroll" class="pg2Btns" data-toggle="modal" data-target="#exampleModal">
-      Reroll </button>
+      <!-- Button trigger modal -->
+      <button type="button" id="reroll" class="pg2Btns" data-toggle="modal" data-target="#exampleModal">
+        Reroll </button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to reroll?</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to reroll?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
 
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-            <button type="button" class="btn btn-primary">Yes</button>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+              <button type="button" class="btn btn-primary">Yes</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-      <button type="button" id="down" class="pg2Btns">Save</button>
+      <button type="button" class="pg2Btns">Save</button>
     </section>
 
-    <footer>
+    <!-- <footer>
       <h4>Designed By</h4>
       <p>
         @ 2022 Gregory Johnston, Daniel Merkin, Sekou Savane, Cyrus Khiabani & Joe Tramontana
         Rutgers Coding Bootcamp
       </p>
-    </footer>
+    </footer> -->
   </main>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
