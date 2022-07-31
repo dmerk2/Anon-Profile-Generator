@@ -4,29 +4,29 @@ var whiteBtn = document.getElementById("white")
 var blackBtn = document.getElementById("black")
 var randomBtn = document.getElementById("randomColor")
 var down = document.getElementById("down")
+ var monsterImage = document.getElementById("monster")
+
+// var repoList = document.querySelector('img');
+// var fetchButton = document.getElementById('box');
+
+ 
+  var requestUrl = "	https://cors-anywhere.herokuapp.com/https://app.pixelencounter.com/api/basic/monsters/random"
+
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function () {
+  if(xhr.readyState === XMLHttpRequest.DONE){
+
+    monsterImage.innerHTML = xhr.response
+    
+  }
+};
+
+xhr.open('GET', requestUrl)
+xhr.send()
 
 
-var repoList = document.querySelector('img');
-var fetchButton = document.getElementById('box');
 
-function getApi() {
-  
-  var requestUrl = ("https://app.pixelencounter.com/api/basic/svgmonsters?primaryColor=string", 
-  { mode: "cors" }, 
-  { method: "get" });
 
-  fetch(requestUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      for (var i = 0; i < data.length; i++) {
-        var monsterImage = document.createElement('img');
-        monsterImage.textContent = data[i].html_url;
-        monsterImage.appendChild(img);
-      }
-    });
-}
 
 
 
