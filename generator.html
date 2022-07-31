@@ -6,12 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Random Profile Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+
   <link rel="stylesheet" href="./Develop/css/style.css" />
 </head>
 
 <body>
-  <main>
-    <div class="centerBtn">
+  
+    <main class="centerBtn">
       <section id="box" class="image">
         <img id="monster" src="https://app.pixelencounter.com/api/basic/monsters/random" />
       </section>
@@ -24,18 +26,21 @@
       <section id="randomBio" class="biography"></section>
       <section class="spaceBtn">
         <button id="reroll" class="pg2Btns">reroll</button>
-        <button id="saveButton" class="pg2Btns">save</button>
+        <!-- <button id="saveButton" class="pg2Btns">save</button> -->
+        <button type="button" id="down" class="pg2Btns" data-toggle="modal" data-target="#myModal">Save</button>
       </section>
+      <footer>
+        <h4>Designed By</h4>
+        <p>
+          @ 2022 Gregory Johnston, Daniel Merkin, Sekou Savane, Cyrus Khiabani & Joe Tramontana
+          Rutgers Coding Bootcamp
+        </p>
+      </footer>
   </main>
 
-  <footer>
-      <h4>Designed By</h4>
-      <p>
-        @ 2022 Gregory Johnston, Daniel Merkin, Sekou Savane, Cyrus Khiabani & Joe Tramontana
-        Rutgers Coding Bootcamp
-      </p>
-    </footer>
-    <script src="./Develop/js/html2canvas.min.js"></script>
-    <script src="Develop\js\script.js"></script>
-  </body>
+
+  <script src="./Develop/js/html2canvas.min.js"></script>
+  <script src="Develop\js\script.js"></script>
+</body>
+
 </html>
