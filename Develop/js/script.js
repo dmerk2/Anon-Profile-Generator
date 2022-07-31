@@ -6,6 +6,7 @@ var randomBtn = document.getElementById("randomColor")
 var down = document.getElementById("down")
 
 
+
 var imageBox = document.getElementById('box')
 var monsterPic = document.getElementById('image')
 
@@ -18,6 +19,7 @@ function getApi()  {
   })
   .catch(err=>console.log(err))
 }
+
 
 
 whiteBtn.addEventListener("click", function(){
