@@ -10,7 +10,7 @@ var reRoll = document.getElementById("reroll")
 // var fetchButton = document.getElementById('box');
 
  function getMonster(){
-  var requestUrl = "	https://cors-anywhere.herokuapp.com/https://app.pixelencounter.com/api/basic/monsters/random"
+  var requestUrl = "	https://fast-dawn-89938.herokuapp.com/https://app.pixelencounter.com/api/basic/monsters/random"
 
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function () {
