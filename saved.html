@@ -6,25 +6,39 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Random Profile Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="./Develop/css/style.css">
   </link>
 </head>
 
 <body class="bg-dark text-light">
-  <header class="jumbotron text-center text-dark mb-3">
+  <header class="jumbotron text-center text-dark">
     <h1>Saved Profiles</h1>
   </header>
+  <form class="flex items-center space-x-6">
+    <div class="shrink-0">
+      <img class="h-16 w-16 object-cover rounded-full" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80" alt="Current profile photo" />
+    </div>
+    <label class="block">
+      <span class="sr-only">Choose profile photo</span>
+      <input type="file" class="block text-sm text-slate-500
+        file:mr-4 file:py-2 file:px-4
+        file:rounded-full file:border-0
+        file:text-sm file:font-semibold
+        file:bg-violet-50 file:text-violet-700
+        hover:file:bg-violet-100
+      "/>
+    </label>
+  </form>
 
   <div id="savedProfile" >
-    <div id="savedImg" class="mb-3">IMG</div>
-    <div id="savedBio" class="mb-3">BIO</div>
+    <div id="savedImg">IMG</div>
+    <div id="savedBio">BIO</div>
   </div>
 
   <div id="savedBios"></div>
-
-  </div>
-
 
   <footer>
     <h4>Designed By</h4>
@@ -33,6 +47,7 @@
       Rutgers Coding Bootcamp
     </p>
   </footer>
+</main>
   <script src="./Develop/js/html2canvas.min.js"></script>
   <script src="./Develop/js/script.js"></script>
 </body>
