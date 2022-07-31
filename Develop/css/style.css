@@ -19,17 +19,8 @@ h1 {
     font-weight: 800;
 }
 
-
-
 span { 
     font-weight: 100;
-}
-#monster {
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-    
 }
 
 .generateBtn { 
@@ -75,8 +66,7 @@ span {
     height: 180px;
     width: 180px;
     text-align: center;
-    padding-top: 30%;
-    font-size: 30px;
+    padding: 1em;
 }
 
 .biography { 
@@ -85,7 +75,6 @@ span {
     height: 190px;
     width: 450px;
     text-align: center;
-    padding-top: 30%;
     font-size: 30px;
 }
 
