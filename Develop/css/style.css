@@ -38,9 +38,6 @@ span {
 }
 
 .generateBtn {
-    padding: theme('spacing.4') theme('spacing.2');
-    background-color: theme('colors.blue.500');
-    padding: theme('spacing.2') theme('spacing.4');
     width: 150px;
     height: 80px;
     border: 2px solid rgb(249, 0, 0);
@@ -104,12 +101,8 @@ main {
     align-items: var(--align-items);
 }
 
-.spaceBtn {
-    margin: 20px;
-}
-
 .pg2Btns {
-    border: 2px solid red;
+    border: 2px ;
     border-radius: 12px;
     margin: 20px;
     height: 55px;
@@ -119,12 +112,13 @@ main {
     cursor: pointer;
     padding: 2px;
     color: white;
+    justify-content: space-evenly;
 }
 
 .pg2Btns:hover {
     opacity: 0.7;
-    width: 110px;
-    height: 60px;
+    width: 105px;
+    height: 55px;
 }
 
 #savedProfile {
@@ -133,7 +127,7 @@ main {
     text-align: var(--text-align);
     margin-bottom: 1em;
 }
-
-.jumbotron {
-    box-shadow: 2px 2px 4px 2px white;
+ 
+#generate {
+    cursor: pointer;
 }
