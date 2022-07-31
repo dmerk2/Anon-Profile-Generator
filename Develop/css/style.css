@@ -1,8 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "./components/buttons.css";
-@import "./components/card.css";
 
 *,
 *::before,
@@ -91,8 +89,8 @@ footer {
 .biography {
     background-color: rgb(255, 255, 255);
     border: 2px solid rgb(255, 0, 0);
-    height: 190px;
-    width: 450px;
+    height: 80px;
+    width: 400px;
     text-align: var(--text-align);
     font-size: 30px;
     padding: 1em;
