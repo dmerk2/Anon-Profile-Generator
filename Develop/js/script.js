@@ -6,19 +6,20 @@ var randomBtn = document.getElementById("randomColor")
 var down = document.getElementById("down")
 
 
+var btnMonster = document.getElementById('generateMonster')
+var monster = document.getElementById('monster')
 
-var imageBox = document.getElementById('box')
-var monsterPic = document.getElementById('image')
-
-function getApi()  {
-  fetch("https://app.pixelencounter.com/api/basic/monsters/random")
+btnMonster.addEventListener('click', function() {
+  fetch("https://app.pixelencounter.com/api/basic/monsters/random/json",{method: 'get'}, {mode:'cors'})
   .then(res => res.json())
   .then(result => {
     console.log(result)
-    imageBox.src = result.message
+    monster.src = result.message
   })
-  .catch(err=>console.log(err))
-}
+.catch(err=>console.log(err))
+}) 
+  
+  
 
 
 
@@ -56,6 +57,8 @@ const image = canvas.toDataURL("image/png", 1.0)
 function goNext (){
     window.location.href= "generator.html"
 }
+
+
 // 180px x 180px
 // {scale: 0.44}
 
