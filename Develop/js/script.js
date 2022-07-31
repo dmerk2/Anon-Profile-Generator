@@ -5,11 +5,11 @@ var blackBtn = document.getElementById("black")
 var randomBtn = document.getElementById("randomColor")
 var down = document.getElementById("down")
  var monsterImage = document.getElementById("monster")
-
+var reRoll = document.getElementById("reroll")
 // var repoList = document.querySelector('img');
 // var fetchButton = document.getElementById('box');
 
- 
+ function getMonster(){
   var requestUrl = "	https://cors-anywhere.herokuapp.com/https://app.pixelencounter.com/api/basic/monsters/random"
 
 var xhr = new XMLHttpRequest();
@@ -24,9 +24,9 @@ xhr.onreadystatechange = function () {
 xhr.open('GET', requestUrl)
 xhr.send()
 
+ }
 
-
-
+getMonster();
 
 
 
@@ -42,6 +42,9 @@ randomBtn.addEventListener("click", randomColor)
 
 down.addEventListener("click", downloading)
 
+reRoll.addEventListener("click", function(){
+  getMonster();
+})
 
 function randomColor(){
 var randomCss = Math.floor(Math.random()*1677215).toString(16);
