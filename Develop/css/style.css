@@ -95,8 +95,11 @@ footer {
     height: 80px;
     width: 400px;
     text-align: var(--text-align);
-    font-size: 30px;
+    font-size: 11px;
+    padding: 1em;
 }
+
+
 
 main {
     height: 100vh;
