@@ -13,9 +13,10 @@
 </head>
 
 <body class="bg-dark text-light">
-  <header class="jumbotron text-center text-dark">
+  <header class="jumbotron container-fluid text-center text-dark bg-black">
     <h1>Saved Profiles</h1>
   </header>
+
   <form class="flex items-center space-x-6 mb-3">
     <div class="shrink-0">
       <img class="h-16 w-16 object-cover rounded-full mb-3"
@@ -30,14 +31,11 @@
   </form>
 
 
-  </section>
-
-  <div id="savedProfile">
-    <div id="savedImg">IMG</div>
-    <div id="savedBio">BIO</div>
+  <div class="container-fluid text-dark">
+    <ul>
+      <li id="savedBios"></li>
+    </ul>
   </div>
-
-  <div id="savedBios"></div>
 
   <footer>
     <h4>Designed By</h4>

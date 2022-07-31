@@ -24,13 +24,17 @@ body {
 }
 
 header {
+    padding-top: 10px;
+    margin-top: 10px;
     font-size: 40px;
     color: white;
+    margin-bottom: 2em;
 }
 
 h1 {
     font-weight: 800;
     text-align: var(--text-align);
+    color: lightblue
 }
 
 span {
@@ -66,11 +70,13 @@ span {
 }
 
 footer {
-    color: white;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 0;
+    color: lightblue;
     flex-direction: column;
     text-align: var(--text-align);
-    margin: 10px;
-    padding: 5px;
+    background-color: black;
 }
 
 .image {
@@ -90,7 +96,6 @@ footer {
     width: 400px;
     text-align: var(--text-align);
     font-size: 30px;
-    padding: 1em;
 }
 
 main {
@@ -130,4 +135,14 @@ main {
  
 #generate {
     cursor: pointer;
+}
+
+#monster {
+    margin: auto;
+    padding: 2em;
+}
+
+#box {
+    margin: auto;
+    margin-bottom: 10px;
 }
