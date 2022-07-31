@@ -4,20 +4,29 @@ var whiteBtn = document.getElementById("white")
 var blackBtn = document.getElementById("black")
 var randomBtn = document.getElementById("randomColor")
 var down = document.getElementById("down")
+ var monsterImage = document.getElementById("monster")
+var reRoll = document.getElementById("reroll")
+// var repoList = document.querySelector('img');
+// var fetchButton = document.getElementById('box');
 
+ function getMonster(){
+  var requestUrl = "	https://fast-dawn-89938.herokuapp.com/https://app.pixelencounter.com/api/basic/monsters/random"
 
-var imageBox = document.getElementById('box')
-var monsterPic = document.getElementById('image')
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function () {
+  if(xhr.readyState === XMLHttpRequest.DONE){
 
-function getApi()  {
-  fetch("https://app.pixelencounter.com/api/basic/monsters/random")
-  .then(res => res.json())
-  .then(result => {
-    console.log(result)
-    imageBox.src = result.message
-  })
-  .catch(err=>console.log(err))
-}
+    monsterImage.innerHTML = xhr.response
+    
+  }
+};
+
+xhr.open('GET', requestUrl)
+xhr.send()
+
+ }
+
+getMonster();
 
 
 whiteBtn.addEventListener("click", function(){
@@ -32,6 +41,9 @@ randomBtn.addEventListener("click", randomColor)
 
 down.addEventListener("click", downloading)
 
+reRoll.addEventListener("click", function(){
+  getMonster();
+})
 
 function randomColor(){
 var randomCss = Math.floor(Math.random()*1677215).toString(16);
