@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Profile Generator</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Profile Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./Develop/css/style.css">
+  </link>
+</head>
+
+<body class="bg-dark text-light">
+  <header class="jumbotron container-fluid text-center text-dark bg-black">
     <h1>Saved Profiles</h1>
+  </header>
 
-    <div class="savedCnt">
-      <div class="IMG"></div>
-      <div class="BIO"></div>
+  <form class="flex items-center space-x-6 mb-3">
+    <div class="shrink-0">
+      <img class="h-16 w-16 object-cover rounded-full mb-3"
+        src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80"
+        alt="Current profile photo" />
     </div>
+    <label class="block">
+      <span class="sr-only">Choose profile photo</span>
+      <input class="mb-3" />
+    </label>
+    <button class="btn btn-success mb-3">Save</button>
+  </form>
 
-    <div class="savedCnt">
-      <div class="IMG"></div>
-      <div class="BIO"></div>
-    </div>
 
-    <div class="savedCnt">
-      <div class="IMG"></div>
-      <div class="BIO"></div>
-    </div>
+  <div class="container-fluid text-dark">
+    <ul>
+      <li id="savedBios"></li>
+    </ul>
+  </div>
 
-    <footer>
-      <h4>Designed By</h4>
-      <p>
-        @ 2022 Gregory Johnston, Daniel Merkin, Sekou Savane, Cyrus Khiabani & Joe Tramontana
-        Rutgers Coding Bootcamp
-      </p>
-    </footer>
-  </body>
+  <footer>
+    <h4>Designed By</h4>
+    <p>
+      @ 2022 Gregory Johnston, Daniel Merkin, Sekou Savane, Cyrus Khiabani & Joe Tramontana
+      Rutgers Coding Bootcamp
+    </p>
+  </footer>
+  </main>
+  <script src="./Develop/js/html2canvas.min.js"></script>
+  <script src="./Develop/js/script.js"></script>
+</body>
+
 </html>
