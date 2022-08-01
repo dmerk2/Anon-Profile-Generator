@@ -1,8 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "./components/buttons.css";
-@import "./components/card.css";
 
 *,
 *::before,
@@ -17,38 +15,41 @@
 :root {
     --text-align: center;
     --align-items: center;
+    --border: 2px solid #cbddeb;
+    --color: #fdf9f3;
 }
 
 body {
-    background-color: black;
+    background-color: #457b9d;
     align-items: var(--align-items);
     text-align: var(--text-align);
 }
 
 header {
     font-size: 40px;
-    color: white;
+    color: var(--color);
+    margin: auto;
 }
 
 h1 {
     font-weight: 800;
     text-align: var(--text-align);
+    color: var(--color);
+    font-size: 2em;
+    margin: auto;
 }
 
-span {
+#h1ProfileGenerator {
     font-weight: 100;
 }
 
 .generateBtn {
-    padding: theme('spacing.4') theme('spacing.2');
-    background-color: theme('colors.blue.500');
-    padding: theme('spacing.2') theme('spacing.4');
     width: 150px;
     height: 80px;
-    border: 2px solid rgb(249, 0, 0);
+    border: var(--border);
     border-radius: 12px;
     background-color: black;
-    color: white;
+    color: var(--color);
     font-size: 25px;
     font-weight: 800;
     margin-top: 50px;
@@ -71,17 +72,18 @@ span {
 }
 
 footer {
-    color: white;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 0;
+    color: var(--color);
     flex-direction: column;
     text-align: var(--text-align);
-    margin: 10px;
-    padding: 5px;
 }
 
 .image {
     margin-top: 40px;
     background-color: rgb(254, 255, 255);
-    border: 2px solid rgb(255, 0, 0);
+    border: var(--border);
     height: 180px;
     width: 180px;
     text-align: var(--text-align);
@@ -90,11 +92,12 @@ footer {
 
 .biography {
     background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(255, 0, 0);
-    height: 190px;
-    width: 450px;
+    border: 2px 2px 7px 3px #066ead;
+    border: var(--border);
+    height: 80px;
+    width: 400px;
     text-align: var(--text-align);
-    font-size: 30px;
+    font-size: 11px;
     padding: 1em;
 }
 
@@ -106,12 +109,8 @@ main {
     align-items: var(--align-items);
 }
 
-.spaceBtn {
-    margin: 20px;
-}
-
 .pg2Btns {
-    border: 2px solid red;
+    border: 2px;
     border-radius: 12px;
     margin: 20px;
     height: 55px;
@@ -120,22 +119,46 @@ main {
     font-size: 18px;
     cursor: pointer;
     padding: 2px;
-    color: white;
+    color: var(--color);
+    justify-content: space-evenly;
+    border: var(--border);
+    border: 2px solid;
+    box-shadow: outset;
 }
 
 .pg2Btns:hover {
     opacity: 0.7;
-    width: 110px;
-    height: 60px;
+    width: 105px;
+    height: 55px;
 }
 
 #savedProfile {
-    border: 2px solid red;
+    border: var(--border);
     padding: auto;
     text-align: var(--text-align);
     margin-bottom: 1em;
 }
 
-.jumbotron {
-    box-shadow: 2px 2px 4px 2px white;
+#generate {
+    cursor: pointer;
+}
+
+#monster {
+    margin: auto;
+    padding: 2em;
+}
+
+#box {
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#randomBio {
+    font-size: 1em;
+    padding: 5px;
+    margin: auto;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    display: inline-table;
 }
