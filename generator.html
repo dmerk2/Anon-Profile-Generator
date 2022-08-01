@@ -18,8 +18,7 @@
 		</header>
 
 		<section id="box" class="image mb-3">
-			<img id="monster" src="https://app.pixelencounter.com/api/basic/monsters/random" />
-			
+			<div id="monster"></div>
 		</section>
 		<section class="spaceBtn mb-3">
 			<button id="white" class="pg2Btns btn btn-primary mb-3">White</button>
@@ -32,7 +31,7 @@
 
 		<section class="spaceBtn">
 			<!-- Button trigger modal -->
-			<button type="button" id="reroll" class="pg2Btns btn btn-primary mb-3" data-toggle="modal"
+			<button type="button"  class="pg2Btns btn btn-primary mb-3" data-toggle="modal"
 				data-target="#exampleModal">
 				Reroll </button>
 
@@ -51,15 +50,16 @@
 
 						<section class="modal-footer">
 							<button type="button" class="btn btn-secondary btn-primary" data-dismiss="modal">No</button>
-							<button type="button" id="yesReroll" class="btn btn-primary">Yes</button>
+							<button type="button"  class="btn btn-primary"  data-dismiss="modal" id="yesroll">Yes</button>
 						</section>
 					</section>
 				</section>
-				<section>
-					<button id="down" class="btn btn-primary pg2Btns">Download</button>
-				</section>
+				
 			</section>
 			<button type="button" id="save" class="pg2Btns btn btn-primary mb-3">Save</button>
+		</section>
+		<section>
+			<button id="down" class="btn btn-primary pg2Btns">Download</button>
 		</section>
 
 		<footer class="container-fluid">
