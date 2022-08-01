@@ -1,6 +1,6 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 
 *,
 *::before,
@@ -15,39 +15,41 @@
 :root {
     --text-align: center;
     --align-items: center;
+    --border: 2px solid #cbddeb;
+    --color: #fdf9f3;
 }
 
 body {
-    background-color: black;
+    background-color: #457b9d;
     align-items: var(--align-items);
     text-align: var(--text-align);
 }
 
 header {
-    padding-top: 10px;
-    margin-top: 10px;
     font-size: 40px;
-    color: white;
-    margin-bottom: 2em;
+    color: var(--color);
+    margin: auto;
 }
 
 h1 {
     font-weight: 800;
     text-align: var(--text-align);
-    color: lightblue
+    color: var(--color);
+    font-size: 2em;
+    margin: auto;
 }
 
-span {
+#h1ProfileGenerator {
     font-weight: 100;
 }
 
 .generateBtn {
     width: 150px;
     height: 80px;
-    border: 2px solid rgb(249, 0, 0);
+    border: var(--border);
     border-radius: 12px;
     background-color: black;
-    color: white;
+    color: var(--color);
     font-size: 25px;
     font-weight: 800;
     margin-top: 50px;
@@ -73,16 +75,15 @@ footer {
     padding: 10px;
     margin: auto;
     margin-bottom: 0;
-    color: lightblue;
+    color: var(--color);
     flex-direction: column;
     text-align: var(--text-align);
-    background-color: black;
 }
 
 .image {
     margin-top: 40px;
     background-color: rgb(254, 255, 255);
-    border: 2px solid rgb(255, 0, 0);
+    border: var(--border);
     height: 180px;
     width: 180px;
     text-align: var(--text-align);
@@ -91,15 +92,14 @@ footer {
 
 .biography {
     background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(255, 0, 0);
+    border: 2px 2px 7px 3px #066ead;
+    border: var(--border);
     height: 80px;
     width: 400px;
     text-align: var(--text-align);
     font-size: 11px;
     padding: 1em;
 }
-
-
 
 main {
     height: 100vh;
@@ -119,8 +119,11 @@ main {
     font-size: 18px;
     cursor: pointer;
     padding: 2px;
-    color: white;
+    color: var(--color);
     justify-content: space-evenly;
+    border: var(--border);
+    border: 2px solid ;
+    box-shadow: outset;
 }
 
 .pg2Btns:hover {
@@ -130,7 +133,7 @@ main {
 }
 
 #savedProfile {
-    border: 2px solid red;
+    border: var(--border);
     padding: auto;
     text-align: var(--text-align);
     margin-bottom: 1em;
@@ -148,4 +151,14 @@ main {
 #box {
     margin: auto;
     margin-bottom: 10px;
+}
+
+#randomBio {
+    font-size: 1em;
+    padding: 5px;
+    margin: auto;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    display: inline-table;
 }
