@@ -6,22 +6,26 @@ var randomBtn = document.getElementById("randomColor")
 var down = document.getElementById("down")
  var monsterImage = document.getElementById("monster")
  var finalText = document.getElementById('randomBio')
-var reRoll = document.getElementById("reroll")
+var reRoll = document.getElementById("yesroll")
 var clip = document.getElementById("clip")
 
 
 // gets from pixel api
 function getMonster(){
+ 
   var requestUrl = "	https://fast-dawn-89938.herokuapp.com/https://app.pixelencounter.com/api/basic/monsters/random"
-
+  
 var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function () {
-  if(xhr.readyState === XMLHttpRequest.DONE){
 
+xhr.onreadystatechange = function () {
+  
+  if(xhr.readyState === XMLHttpRequest.DONE){
+    
     monsterImage.innerHTML = xhr.response
     
   }
 };
+
 
 xhr.open('GET', requestUrl)
 xhr.send()
@@ -94,16 +98,16 @@ randomBtn.addEventListener("click", randomColor)
 
 down.addEventListener("click", downloading)
 
-reRoll.addEventListener("click", function(){
-  getMonster();
-  getFact();
-})
+reRoll.addEventListener("click", run)
 
-clip.addEventListener("click", copyFact)
+// clip.addEventListener("click", copyFact)
 
-
-getMonster();
+function run(){
 getFact();
+getMonster();
+}
+
+run();
 // 180px x 180px
 // {scale: 0.44}
 
