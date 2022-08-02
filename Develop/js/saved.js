@@ -4,7 +4,7 @@ var ulEl = document.getElementById("savedBios")
 function renderSaved(){
     var tryThis = localStorage.getItem('allProfiles')
     var printObj = JSON.parse(tryThis);
-    console.log(printObj)
+    
     
     for(i = 0; i < printObj.length; i++){
  var printPicture = printObj[i].picture
@@ -12,6 +12,7 @@ function renderSaved(){
     var liEl = document.createElement("li")
     ulEl.appendChild(liEl)
     var imgEl = document.createElement('img')
+    
     liEl.appendChild(imgEl)
     imgEl.src = printPicture 
     
