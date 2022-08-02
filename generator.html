@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Random Profile Generator</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-
+	<script src="https://kit.fontawesome.com/3c370ecfed.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="./Develop/css/style.css" />
 </head>
 
@@ -16,6 +16,7 @@
 	<main>
 		<header>
 			<h1>Generate your profile here</h1>
+			<a id="savedPage" href="saved.html">Saved Profiles</a>
 		</header>
 
 		<section id="box" class="image mb-3">
@@ -27,47 +28,51 @@
 			<button id="randomColor" class="pg2Btns btn btn-primary mb-3">Random</button>
 		</section>
 
-		<section id="randomBio" class="biography mb-3 text-center"></section>
-		<section class="spaceBtn">
-			<!-- Button trigger modal -->
-			<button type="button"  class="pg2Btns btn btn-primary mb-3" data-toggle="modal"
-				data-target="#exampleModal">
-				Reroll </button>
+		<div class="container">
+			<section id="randomBio" class="biography mb-3 text-center"></section>
+			<button id="copy" class="btn btn-primary"><i class="fa-solid fa-clipboard"></i></button>
 
-			<!-- Modal -->
-			<section class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-				aria-hidden="true">
-				<section class="modal-dialog" role="document">
-					<section class="modal-content">
-						<section class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Are you sure you want to reroll?</h5>
-							<button id="rerollBtn" type="button" class="close btn btn-primary mb-3" data-dismiss="modal"
-								aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</section>
+			<section class="spaceBtn">
+				<!-- Button trigger modal -->
+				<button type="button" class="pg2Btns btn btn-primary mb-3" data-toggle="modal" data-target="#exampleModal">
+					Reroll </button>
 
-						<section class="modal-footer">
-							<button type="button" class="btn btn-secondary btn-primary" data-dismiss="modal">No</button>
-							<button type="button"  class="btn btn-primary"  data-dismiss="modal" id="yesroll">Yes</button>
+				<!-- Modal -->
+				<section class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+					aria-hidden="true">
+					<section class="modal-dialog" role="document">
+						<section class="modal-content">
+							<section class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Are you sure you want to reroll?</h5>
+								<button id="rerollBtn" type="button" class="close btn btn-primary mb-3" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</section>
+
+							<section class="modal-footer">
+								<button type="button" class="btn btn-secondary btn-primary" data-dismiss="modal">No</button>
+								<button type="button" class="btn btn-primary" data-dismiss="modal" id="yesroll">Yes</button>
+							</section>
 						</section>
 					</section>
-				</section>
-				
-			</section>
-			<button type="button" id="save" class="pg2Btns btn btn-primary mb-3">Save</button>
-		</section>
-		<section>
-			<button id="down" class="btn btn-primary pg2Btns">Download</button>
-		</section>
 
-		<footer class="container-fluid">
-			<h4>Designed By</h4>
-			<p>
-				@ 2022 Gregory Johnston, Daniel Merkin, Sekou Savane, Cyrus Khiabani & Joe Tramontana
-				Rutgers Coding Bootcamp
-			</p>
-		</footer>
+				</section>
+				<button type="button" id="save" class="pg2Btns btn btn-primary mb-3">Save</button>
+			</section>
+			<section>
+				<!-- HTML to write -->
+				<button id="down" class="btn btn-primary pg2Btns mb-3" href="#" data-toggle="tooltip"
+					title="Download Profile Picture?">Download</button>
+			</section>
+
+			<footer class="container-fluid">
+				<h4>Designed By</h4>
+				<p>
+					@ 2022 Gregory Johnston, Daniel Merkin, Sekou Savane, Cyrus Khiabani & Joe Tramontana
+					Rutgers Coding Bootcamp
+				</p>
+			</footer>
 	</main>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
