@@ -7,8 +7,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Random Profile Generator</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+	<link
+	rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+	integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+	crossorigin="anonymous"
+  />
 
-	<link rel="stylesheet" href="./Develop/css/style.css" />
+<link rel="stylesheet" href="./Develop/css/style.css" />
 </head>
 
 <body>
@@ -26,11 +32,13 @@
 			<button id="black" class="pg2Btns btn btn-primary mb-3">Black</button>
 			<button id="randomColor" class="pg2Btns btn btn-primary mb-3">Random</button>
 		</section>
-
+        <div class="biocnt"> 
 		<section id="randomBio" class="biography mb-3 text-center"></section>
+		<button class="btn-primary mb-3 btn" id="copy"><i class="bi bi-clipboard-data-fill"></i></button>
+		</div>
 		<section class="spaceBtn">
 			<!-- Button trigger modal -->
-			<button type="button"  class="pg2Btns btn btn-primary mb-3" data-toggle="modal"
+			<button type="button"  class= "pg2Btns btn btn-primary mb-3" data-toggle="modal"
 				data-target="#exampleModal">
 				Reroll </button>
 
@@ -60,6 +68,8 @@
 		<section>
 			<button id="down" class="btn btn-primary pg2Btns">Download</button>
 		</section>
+
+		<div class="footerline"></div> 
 
 		<footer class="container-fluid">
 			<h4>Designed By</h4>
