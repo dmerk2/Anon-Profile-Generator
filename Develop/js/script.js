@@ -8,6 +8,7 @@ var down = document.getElementById("down")
  var finalText = document.getElementById('randomBio')
 var reRoll = document.getElementById("yesroll")
 var clip = document.getElementById("clip")
+var save = document.getElementById("save")
 
 
 // gets from pixel api
@@ -108,6 +109,54 @@ getMonster();
 }
 
 run();
+
+
+
+
+// local storage testing
+save.addEventListener("click", function(){
+  storeProfile();
+  
+  
+})
+
+function storeProfile(){
+  html2canvas(box).then(function(canvas){
+       
+    const image = canvas.toDataURL("image/png", 1.0)
+  saveLastProfile(image);
+  
+  })
+
+  }
+  
+
+function saveLastProfile(pic){
+  
+  var savedProfile = JSON.parse(localStorage.getItem("allProfiles"))
+  if(savedProfile === null) savedProfile = [];
+  
+  var profile ={
+    picture: pic,
+    bio: finalText.innerHTML
+  }
+  localStorage.setItem('profile', JSON.stringify(profile))
+  savedProfile.push(profile)
+  localStorage.setItem("allProfiles", JSON.stringify(savedProfile))
+}
+
+// function saveTest(){
+//   localStorage.setItem('picture', box.innerHTML)
+// }
+
+
+
+
+
+
+
+
+
 // 180px x 180px
 // {scale: 0.44}
 
