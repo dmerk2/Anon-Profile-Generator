@@ -7,7 +7,7 @@ var down = document.getElementById("down")
  var monsterImage = document.getElementById("monster")
  var finalText = document.getElementById('randomBio')
 var reRoll = document.getElementById("yesroll")
-var clip = document.getElementById("clip")
+var clip = document.getElementById("copy")
 var save = document.getElementById("save")
 
 
@@ -101,7 +101,7 @@ down.addEventListener("click", downloading)
 
 reRoll.addEventListener("click", run)
 
-// clip.addEventListener("click", copyFact)
+clip.addEventListener("click", copyFact)
 
 function run(){
 getFact();
