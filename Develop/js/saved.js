@@ -1,5 +1,5 @@
 var ulEl = document.getElementById("savedBios")
-
+var clear = document.getElementById("clear")
 
 function renderSaved(){
     var tryThis = localStorage.getItem('allProfiles')
@@ -24,3 +24,8 @@ function renderSaved(){
     }
     
     renderSaved();
+   
+ clear.addEventListener("click", function(){
+   localStorage.clear()
+   ulEl.style.display = "none"
+ })   
