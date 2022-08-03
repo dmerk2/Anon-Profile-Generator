@@ -19,8 +19,8 @@ function renderSaved(){
     var p = document.createElement('p')
     p.textContent = printBio
     liEl.appendChild(p)
-   var download = createElement('button')
-   download.textcontent = "download"
+   var download = document.createElement('button')
+   download.textContent = "download"
    liEl.appendChild(download)
     }
     }
