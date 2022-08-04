@@ -28,26 +28,54 @@ body {
 header {
     font-size: 40px;
     color: var(--color);
-    margin: auto;
+    margin: 0 auto;  
 }
+
+nav { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
 
 #savedProfileHeader {
     background-color: #457b9d;
-    font-size: 4rem;
+    font-size: 4rem; 
+} 
+
+h1 {
+    font-weight: 100;
+    text-align: var(--text-align);
+    color: var(--color);
+    font-size: 2em;
+    margin: 50px;
+}
+
+h1 span {
     font-weight: 800;
 }
 
-h1 {
+h2 { 
     font-weight: 800;
     text-align: var(--text-align);
     color: var(--color);
     font-size: 2em;
-    margin: auto;
+    margin: 50px;
 }
 
-#h1ProfileGenerator {
+h2 span { 
     font-weight: 100;
 }
+
+h3 { 
+    text-align: var(--text-align);
+    color: var(--color);
+    font-size: 2em;
+    font-weight: 100;
+}
+
+h3 span { 
+    font-weight:1000;
+} 
 
 .generateBtn {
     width: 150px;
@@ -77,15 +105,6 @@ h1 {
     align-items: var(--align-items);
 }
 
-footer {
-    padding: 10px;
-    margin: auto;
-    margin-bottom: 0;
-    color: var(--color);
-    flex-direction: column;
-    text-align: var(--text-align);
-}
-
 .image {
     margin-top: 40px;
     background-color: rgb(254, 255, 255);
@@ -105,14 +124,6 @@ footer {
     text-align: var(--text-align);
     font-size: 11px;
     padding: 1em;
-}
-
-main {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: var(--align-items);
 }
 
 .pg2Btns {
@@ -145,10 +156,6 @@ main {
     margin-bottom: 1em;
 }
 
-#generate {
-    cursor: pointer;
-}
-
 #monster {
     margin: auto;
     padding: 2em;
@@ -170,8 +177,54 @@ main {
 }
 
 #savedPage {
+    color: white; 
+    text-decoration: none;
+    font-size: 30px;
+    font-family:'Courier New', Courier, monospace;
+} 
+
+#savedPage:hover { 
+    opacity: 0.7;
+}
+
+svg { 
+    height: 50px;
+    width: 50px;
+}
+
+li img { 
+    display: inline-block;
+}
+
+.savedbiosBigBox {  
     display: flex;
     justify-content: center;
-    color: blue;
+    word-wrap: break-word;
+    word-break: keep-all;
 }
+
+/* Saved Page is now fully responsive*/
+
+.savedBiosBox { 
+    color: white;
+    width: 30%;
+    padding: 20px;
+}
+
+#copy { 
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+footer {
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 0;
+    color: var(--color);
+    flex-direction: column;
+    text-align: var(--text-align);
+    margin-top: 50px;
+}
+
+
 
