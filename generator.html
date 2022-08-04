@@ -9,14 +9,20 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 	<script src="https://kit.fontawesome.com/3c370ecfed.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="./Develop/css/style.css" />
+	<link rel="apple-touch-icon" sizes="180x180" href="\Images\favicon.io\apple-touch-icon.png"> <!-- Added Favicon-->
+<link rel="icon" type="image/png" sizes="32x32" href="\Images\favicon.io\favicon-32x32.png"> 
+<link rel="icon" type="image/png" sizes="16x16" href="\Images\favicon.io\favicon-16x16.png">
+<link rel="manifest" href="\Images\favicon.io\site.webmanifest">
 </head>
 
 <body>
 
 	<main>
 		<header>
-			<h1>Generate your profile here</h1>
+			<nav>
+			<h1>Generate<span> your profile here</span></h1>
 			<a id="savedPage" href="saved.html">Saved Profiles</a>
+			</nav>
 		</header>
 
 		<section id="box" class="image mb-3">
@@ -28,9 +34,12 @@
 			<button id="randomColor" class="pg2Btns btn btn-primary mb-3">Random</button>
 		</section>
 
-		<div class="container">
+		
 			<section id="randomBio" class="biography mb-3 text-center"></section>
-			<button id="copy" class="btn btn-primary"><i class="fa-solid fa-clipboard"></i></button>
+			<button id="copy" class="btn btn-primary"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-data-fill" viewBox="0 0 16 16">
+				<path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+				<path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1ZM10 8a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V8Zm-6 4a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1Zm4-3a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0v-3a1 1 0 0 1 1-1Z"/>
+			  </svg></button> <!-- Added Clipboard Icon With Boostrap-->
 
 			<section class="spaceBtn">
 				<!-- Button trigger modal -->
