@@ -688,3 +688,8 @@ main {
 .jumbotron {
   box-shadow: 2px 2px 4px 2px white;
 }
+
+.Tr { 
+  height: 50px;
+  width: 50px;
+}
