@@ -1,4 +1,4 @@
-# Anon-Profile-Generator
+# Random-Profile-Generator
 
 ## Table Of Contents
   - [Table Of Contents](#table-of-contents)
@@ -13,7 +13,7 @@
 ## Screenshots
 ---
 Screenshot of generate page
-<img src="./Images/screenshot-generate-page.png">
+<img src="./Images/landingpage.png">
 
 ## Deployed URL
 ---
