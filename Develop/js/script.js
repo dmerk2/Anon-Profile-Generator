@@ -106,6 +106,9 @@ clip.addEventListener("click", copyFact);
 
 run();
 
+// vvvvvvv local storage functionality vvvvvvv
+
+
 //stores profile picture as data url in local storage
 function storeProfile() {
   html2canvas(box).then(function (canvas) {
