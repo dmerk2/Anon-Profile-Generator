@@ -27,16 +27,12 @@ function renderSaved(){
     p.textContent = printBio
     liEl.appendChild(p)
 
-   var download = document.createElement('button')
-   download.textContent = "download"
-   liEl.appendChild(download)
+
    
    var space = document.createElement('br')
-    download.appendChild(space)
+
     liEl.appendChild(space)
-   var copy = document.createElement('button')
-   copy.textContent = 'copy'
-   liEl.appendChild(copy)
+ 
     }
     }
     
@@ -48,9 +44,7 @@ function renderSaved(){
  })   
 
     
-    var space = document.createElement('br')
-    liEl.appendChild(space)
-
+    
 
 
 renderSaved();

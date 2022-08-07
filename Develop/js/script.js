@@ -1,3 +1,4 @@
+// variables
 var start = document.getElementById("generate");
 var box = document.getElementById("box");
 var whiteBtn = document.getElementById("white");
@@ -72,9 +73,19 @@ function copyFact() {
   finalText.removeChild(area);
 }
 
+
+
+function run() {
+  getFact();
+  getMonster();
+}
+
+
+
 whiteBtn.addEventListener("click", function () {
   box.style.backgroundColor = "white";
 });
+
 
 blackBtn.addEventListener("click", function () {
   box.style.backgroundColor = "black";
@@ -88,17 +99,8 @@ reRoll.addEventListener("click", run);
 
 clip.addEventListener("click", copyFact);
 
-function run() {
-  getFact();
-  getMonster();
-}
 
 run();
-
-// local storage testing
-save.addEventListener("click", function () {
-  storeProfile();
-});
 
 function storeProfile() {
   html2canvas(box).then(function (canvas) {
@@ -120,12 +122,16 @@ function saveLastProfile(pic) {
   localStorage.setItem("allProfiles", JSON.stringify(savedProfile));
 }
 
-// function saveTest(){
-//   localStorage.setItem('picture', box.innerHTML)
-// }
 
-// 180px x 180px
-// {scale: 0.44}
+save.addEventListener("click", function () {
+  storeProfile();
+});
 
-// 170px x 170px
-// {scale: 0.417}
+
+
+
+
+
+
+
+
