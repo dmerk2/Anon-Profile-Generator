@@ -37,17 +37,24 @@ SO THAT I can save time while still having a unique looking profile
 <img src="Images\landingpage.png">
 
 ```md
-This is our landing page for our random profile generator. To start rhe application, you click the genrate button. 
+This is our landing page for our random profile generator. To start the application, you click the genrate button. 
 ```
 
 ## Screenshot of Generate Page
 ---
 <img src="Images\generate.png">
 
+```md
+Users can generate a profile picture and bio assets upon the lauch of this page. Users can reroll their generation or save the current generation by clicking the respective buttons. Users can download the profile picture by clicking download, and copy the fact generation to their clipboard by clicking the clipboard button. 
+```
 
 ## Screenshot of Saved Profile Page
 
 <img src="./Images/savedProfilesPage.png">
+
+```md
+Users saved profile generations are rendered on this page. Users can also clear the saved profiles and therefore clear their local storage contents. 
+```
 
 ## Deployed URL
 ---
