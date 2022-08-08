@@ -34,7 +34,7 @@ SO THAT I can save time while still having a unique looking profile
 
 ## Screenshot of Landing Page
 ---
-<img src="Images\landingPage.png">
+<img src="Images\landingpage.png">
 
 ```md
 This is our landing page for our random profile generator. To start rhe application, you click the genrate button. 
