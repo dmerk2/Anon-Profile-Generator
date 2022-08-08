@@ -77,6 +77,7 @@ h3 span {
     font-weight:1000;
 } 
 
+
 .generateBtn {
     width: 150px;
     height: 80px;
@@ -226,7 +227,5 @@ footer {
     margin-top: 50px;
 }
 
-#clear { 
-    margin-bottom: 30px;
-}
+
 

@@ -1,5 +1,3 @@
-
-// variables 
 var start = document.getElementById("generate");
 var box = document.getElementById("box");
 var whiteBtn = document.getElementById("white");
@@ -74,30 +72,19 @@ function copyFact() {
   finalText.removeChild(area);
 }
 
-
-// calls apis for initiation 
-function run() {
-  getFact();
-  getMonster();
-}
-
-// changes background color to white
 whiteBtn.addEventListener("click", function () {
   box.style.backgroundColor = "white";
 });
 
-// changes background color to black
 blackBtn.addEventListener("click", function () {
   box.style.backgroundColor = "black";
 });
 
-// changes background color to random css color
 randomBtn.addEventListener("click", randomColor);
 
 // triggers download of profile picture
 down.addEventListener("click", downloading);
 
-// triggers regeneration of apis
 reRoll.addEventListener("click", run);
 
 // triggers bio clipboard copy
@@ -106,10 +93,11 @@ clip.addEventListener("click", copyFact);
 
 run();
 
-// local storage functionality 
+// local storage testing
+save.addEventListener("click", function () {
+  storeProfile();
+});
 
-
-// stores profile picture as data url in local storage
 function storeProfile() {
   html2canvas(box).then(function (canvas) {
     const image = canvas.toDataURL("image/png", 1.0);
@@ -117,7 +105,6 @@ function storeProfile() {
   });
 }
 
-// sets local storage object of saved profile picture and bio 
 function saveLastProfile(pic) {
   var savedProfile = JSON.parse(localStorage.getItem("allProfiles"));
   if (savedProfile === null) savedProfile = [];
@@ -131,7 +118,12 @@ function saveLastProfile(pic) {
   localStorage.setItem("allProfiles", JSON.stringify(savedProfile));
 }
 
-// triggers profile picture and bio storage functions
-save.addEventListener("click", function () {
-  storeProfile();
-});
+// function saveTest(){
+//   localStorage.setItem('picture', box.innerHTML)
+// }
+
+// 180px x 180px
+// {scale: 0.44}
+
+// 170px x 170px
+// {scale: 0.417}
