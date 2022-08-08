@@ -1,3 +1,4 @@
+// variables
 var start = document.getElementById("generate");
 var box = document.getElementById("box");
 var whiteBtn = document.getElementById("white");
@@ -10,7 +11,7 @@ var reRoll = document.getElementById("yesroll");
 var clip = document.getElementById("copy");
 var save = document.getElementById("save");
 
-// gets from pixel api
+// gets monster svg from pixel api
 function getMonster() {
   var requestUrl =
     "	https://fast-dawn-89938.herokuapp.com/https://app.pixelencounter.com/api/basic/monsters/random";
@@ -27,7 +28,7 @@ function getMonster() {
   xhr.send();
 }
 
-// gets from fact api
+// gets random fact from fact api
 function getFact() {
   var requestUrl = "https://uselessfacts.jsph.pl/random.json?language=en";
 
@@ -40,13 +41,13 @@ function getFact() {
     });
 }
 
-// random css color
+// random css color generation
 function randomColor() {
   var randomCss = Math.floor(Math.random() * 1677215).toString(16);
   box.style.backgroundColor = "#" + randomCss;
 }
 
-// downloads box div as a png
+// downloads profile picture render as a png
 function downloading() {
   html2canvas(box).then(function (canvas) {
     const image = canvas.toDataURL("image/png", 1.0);
@@ -72,34 +73,43 @@ function copyFact() {
   finalText.removeChild(area);
 }
 
-whiteBtn.addEventListener("click", function () {
-  box.style.backgroundColor = "white";
-});
 
-blackBtn.addEventListener("click", function () {
-  box.style.backgroundColor = "black";
-});
-
-randomBtn.addEventListener("click", randomColor);
-
-down.addEventListener("click", downloading);
-
-reRoll.addEventListener("click", run);
-
-clip.addEventListener("click", copyFact);
-
+// calls apis for initiation
 function run() {
   getFact();
   getMonster();
 }
 
-run();
 
-// local storage testing
-save.addEventListener("click", function () {
-  storeProfile();
+//changes background color to white
+whiteBtn.addEventListener("click", function () {
+  box.style.backgroundColor = "white";
 });
 
+//changes background color to black
+blackBtn.addEventListener("click", function () {
+  box.style.backgroundColor = "black";
+});
+
+//changes background color to random css color
+randomBtn.addEventListener("click", randomColor);
+
+// triggers download of profile picture
+down.addEventListener("click", downloading);
+
+//triggers regeneration of apis
+reRoll.addEventListener("click", run);
+
+// triggers bio clipboard copy
+clip.addEventListener("click", copyFact);
+
+
+run();
+
+// vvvvvvv local storage functionality vvvvvvv
+
+
+//stores profile picture as data url in local storage
 function storeProfile() {
   html2canvas(box).then(function (canvas) {
     const image = canvas.toDataURL("image/png", 1.0);
@@ -107,6 +117,7 @@ function storeProfile() {
   });
 }
 
+// sets local storage object of saved profile picture and bio
 function saveLastProfile(pic) {
   var savedProfile = JSON.parse(localStorage.getItem("allProfiles"));
   if (savedProfile === null) savedProfile = [];
@@ -120,12 +131,16 @@ function saveLastProfile(pic) {
   localStorage.setItem("allProfiles", JSON.stringify(savedProfile));
 }
 
-// function saveTest(){
-//   localStorage.setItem('picture', box.innerHTML)
-// }
+//triggers profile picture and bio storage functions
+save.addEventListener("click", function () {
+  storeProfile();
+});
 
-// 180px x 180px
-// {scale: 0.44}
 
-// 170px x 170px
-// {scale: 0.417}
+
+
+
+
+
+
+

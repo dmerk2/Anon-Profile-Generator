@@ -1,7 +1,9 @@
+// variables
 var ulEl = document.getElementById("savedBios")
 var clear = document.getElementById('clear')
 
 
+// renders unordered list of saved profile pictures and bios
 function renderSaved(){
 
     var tryThis = localStorage.getItem('allProfiles')
@@ -13,6 +15,9 @@ function renderSaved(){
    var printPicture = printObj[i].picture
    var printBio = printObj[i].bio
 
+
+
+
     var liEl = document.createElement("li")
     ulEl.appendChild(liEl)
 
@@ -23,16 +28,29 @@ function renderSaved(){
     var p = document.createElement('p')
     p.textContent = printBio
     liEl.appendChild(p)
-    
-    var space = document.createElement('br')
-    liEl.appendChild(space)
-  }
 
-}
+
+   
+   var space = document.createElement('br')
+   ulEl.appendChild(space)
+ 
+    }
+    }
+    
+    renderSaved();
+   
+ clear.addEventListener("click", function(){
+   localStorage.clear()
+   ulEl.style.display = "none"
+ })   
+
+    
+    
 
 
 renderSaved();
 
+//clears local storage and hides ulEl
  clear.addEventListener('click', function(){
   localStorage.clear();
   ulEl.style.display = 'none';
