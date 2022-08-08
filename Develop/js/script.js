@@ -72,14 +72,23 @@ function copyFact() {
   finalText.removeChild(area);
 }
 
+// calls api initiation 
+function run(){
+  getMonster();
+  getFact();
+}
+
+// changes background color to white
 whiteBtn.addEventListener("click", function () {
   box.style.backgroundColor = "white";
 });
 
+// changes background color to black
 blackBtn.addEventListener("click", function () {
   box.style.backgroundColor = "black";
 });
 
+// changes background color to random css color
 randomBtn.addEventListener("click", randomColor);
 
 // triggers download of profile picture
@@ -93,11 +102,11 @@ clip.addEventListener("click", copyFact);
 
 run();
 
-// local storage testing
-save.addEventListener("click", function () {
-  storeProfile();
-});
+//  VVVVVVV local storage functionality VVVVVVV
 
+
+
+// stores profile picture as data url in local storage 
 function storeProfile() {
   html2canvas(box).then(function (canvas) {
     const image = canvas.toDataURL("image/png", 1.0);
@@ -105,6 +114,7 @@ function storeProfile() {
   });
 }
 
+// sets local storage object of saved profile and bio
 function saveLastProfile(pic) {
   var savedProfile = JSON.parse(localStorage.getItem("allProfiles"));
   if (savedProfile === null) savedProfile = [];
@@ -118,12 +128,7 @@ function saveLastProfile(pic) {
   localStorage.setItem("allProfiles", JSON.stringify(savedProfile));
 }
 
-// function saveTest(){
-//   localStorage.setItem('picture', box.innerHTML)
-// }
-
-// 180px x 180px
-// {scale: 0.44}
-
-// 170px x 170px
-// {scale: 0.417}
+// triggers profile picture and bio storage functions
+save.addEventListener("click", function () {
+  storeProfile();
+});

@@ -17,13 +17,6 @@ function renderSaved(){
    var printPicture = printObj[i].picture
    var printBio = printObj[i].bio
 
-
-   
-
-
-
-
-
     var liEl = document.createElement("li")
     ulEl.appendChild(liEl)
 
@@ -43,22 +36,11 @@ function renderSaved(){
  
   
   }
-
-
-
-   
-   var space = document.createElement('br')
-   ulEl.appendChild(space)
  
     }
     
     
-    renderSaved();
-   
- clear.addEventListener("click", function(){
-   localStorage.clear()
-   ulEl.style.display = "none"
- })   
+
 
     
     
@@ -67,7 +49,7 @@ function renderSaved(){
 renderSaved();
 
 
-// clears local storage and hides UlEl
+
 
 //clears local storage and hides ulEl
 
