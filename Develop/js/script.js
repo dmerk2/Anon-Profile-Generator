@@ -13,7 +13,7 @@ var save = document.getElementById("save");
 // gets monster svg from pixel api
 function getMonster() {
   var requestUrl =
-    "	https://fast-dawn-89938.herokuapp.com/https://app.pixelencounter.com/api/basic/monsters/random";
+    "	https://app.pixelencounter.com/api/basic/monsters/random";
 
   var xhr = new XMLHttpRequest();
 
